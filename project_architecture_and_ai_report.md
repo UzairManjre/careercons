@@ -95,7 +95,7 @@ The Poppy brain is driven by a local LLM execution framework utilizing **Ollama*
 
 ### 👁️ Multimodal Visual Desk Clues Analyzer (VLM Engine)
 Step 1 allows the user to upload a photo of their workspace, desk, or textbook setup. This image is handled via a **VLM (Vision-Language Model)**:
-1. **Multimodal API Request:** The image is converted into a base64 encoded string and submitted inside a message payload to Ollama's vision capabilities (e.g. `llava`, `moondream`, or `llama3.2-vision`).
+1. **Multimodal API Request:** The image is converted into a base64 encoded string and submitted inside a message payload to Ollama's vision capabilities (specifically the active **`gemma4:e2b`** model).
 2. **Visual Observation Clues:** The VLM analyzes the image for specific educational objects (e.g. medical textbooks, calculators, electronics, art pads, journals, notebooks).
 3. **Structured Image Response Prompt:**
    * The VLM is prompted with `IMAGE_ANALYSIS_PROMPT` to analyze study desks, books, laptops, art tools, sports gear, etc., and confirm if they align.

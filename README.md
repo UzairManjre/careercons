@@ -45,16 +45,10 @@ Ensure you have the following installed on your machine:
 Poppy runs entirely on local, private inference models. 
 
 1. **Install and Launch Ollama** from the official [website](https://ollama.com/).
-2. **Download the AI Models:**
-   * **Option A: Standard Recommended Models** (highly capable):
-     ```bash
-     ollama pull llama3
-     ollama pull llava
-     ```
-   * **Option B: Custom Lightweight Model** (as currently set up in your local configuration):
-     ```bash
-     ollama pull gemma4:e2b
-     ```
+2. **Download the Default AI Model:**
+   ```bash
+   ollama pull gemma4:e2b
+   ```
 
 ---
 
@@ -157,7 +151,7 @@ careercons/
 ## 🔍 System Verification Checklist
 
 To confirm everything is operating correctly, complete this sanity check:
-1. **Model Check:** Run `ollama list` and verify both `llama3` and `llava` are loaded.
+1. **Model Check:** Run `ollama list` and verify `gemma4:e2b` is loaded.
 2. **Backend Handshake:** Open `http://localhost:8000/docs` in your browser to verify the Swagger UI loads the active routers (`/session`, `/profile`, `/chat`, `/report`).
 3. **Desk Upload Verification:** Upload a photo in Step 1. Verify the console records `[Ollama VLM Start]` and receives a parsed JSON payload with clues reasoning and field classifications.
 4. **Chat Validation:** Answer a question in Step 3. Verify that the answer typewrites word-by-word in real time and renders 3 customized suggestion chips.

@@ -68,7 +68,7 @@ The `OllamaClient` exposes two inference modes, selected per use case:
 │  │    { type: "image_url", image_url: { url: base64 } }     │   │
 │  │  ]                                                       │   │
 │  │                                                         │   │
-│  │  → Requires vision-capable model (llava/llama3.2-vision) │   │
+│  │  → Requires vision-capable model (gemma4:e2b)           │   │
 │  │  → Single-shot classification + explanation              │   │
 │  └───────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────┘
@@ -547,7 +547,7 @@ synonym_map = {
 
 | Error | Detection | Response |
 |-------|-----------|----------|
-| Model lacks vision capability | `"MODEL_DOES_NOT_SUPPORT_IMAGES"` in error | 400 with install instructions (llava/moondream/llama3.2-vision) |
+| Model lacks vision capability | `"MODEL_DOES_NOT_SUPPORT_IMAGES"` in error | 400 validation response (requires gemma4:e2b vision-enabled) |
 | Empty response | `result is None` | Default fallback JSON with `confidence: 0.5, suggested_field: "TECH & AI"` |
 | Malformed JSON | `json.JSONDecodeError` | Regex extraction + fallback |
 | Low confidence | `confidence < 0.6` | Override `should_pursue = False` |

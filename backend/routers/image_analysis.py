@@ -155,7 +155,7 @@ async def analyze_image(file: UploadFile = File(...), selected_field: str | None
         if "MODEL_DOES_NOT_SUPPORT_IMAGES" in error_msg:
             raise HTTPException(
                 status_code=400, 
-                detail="Your Ollama model does not support image input. Please install a vision-capable model like llava, moondream, or llama3.2-vision, then update your config.py to use it."
+                detail="Your Ollama model does not support image input. Please verify that your gemma4:e2b model is vision-capable and properly loaded."
             )
         raise HTTPException(status_code=500, detail=f"Image analysis failed: {error_msg}")
 
