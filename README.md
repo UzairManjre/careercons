@@ -45,14 +45,16 @@ Ensure you have the following installed on your machine:
 Poppy runs entirely on local, private inference models. 
 
 1. **Install and Launch Ollama** from the official [website](https://ollama.com/).
-2. **Download the Default Dialogue LLM** (e.g., Llama 3 or Mistral):
-   ```bash
-   ollama pull llama3
-   ```
-3. **Download a Vision-Capable Model (VLM)** for Step 1's workspace analysis (e.g., LLaVA, Moondream, or Llama 3.2 Vision):
-   ```bash
-   ollama pull llava
-   ```
+2. **Download the AI Models:**
+   * **Option A: Standard Recommended Models** (highly capable):
+     ```bash
+     ollama pull llama3
+     ollama pull llava
+     ```
+   * **Option B: Custom Lightweight Model** (as currently set up in your local configuration):
+     ```bash
+     ollama pull gemma4:e2b
+     ```
 
 ---
 
@@ -81,8 +83,8 @@ Poppy runs entirely on local, private inference models.
    ```python
    # backend/config.py
    ollama_host: str = "http://localhost:11434"
-   model_name: str = "llama3"       # Core LLM for Chat & Report Generation
-   vision_model: str = "llava"      # Multimodal Model for Image Vibe Check
+   model_name: str = "gemma4:e2b"       # Core LLM for Chat & Report Generation
+   vision_model: str = "gemma4:e2b"      # Multimodal Model for Image Vibe Check
    ```
 5. Start the backend development server:
    ```bash
