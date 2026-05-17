@@ -1,4 +1,4 @@
-# 🌌 Poppy AI: Next-Gen Career Counselor for Indian Students
+mage m# 🌌 Poppy AI: Next-Gen Career Counselor for Indian Students
 
 Poppy is an empathetic, AI-powered career counseling and roadmap synthesis platform. It is designed specifically to guide Indian high-school and college students through a highly personalized diagnostic process, helping them discover optimal academic trajectories, hybrid career combinations, and realistic localized blueprints (colleges, target domestic/MNC employers, starting packages, and competitive exam tracks).
 

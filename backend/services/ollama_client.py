@@ -68,16 +68,14 @@ class OllamaClient:
         print(f"\n[Ollama VLM Start - Model: {settings.vision_model}]")
         print(f"[Ollama VLM] Image size: {len(image_base64)} chars")
         
-        # Use /api/chat with multimodal message format
+        # Use /api/chat with Ollama vision format
         payload = {
             "model": settings.vision_model,
             "messages": [
                 {
                     "role": "user",
-                    "content": [
-                        {"type": "text", "text": prompt},
-                        {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{image_base64}"}}
-                    ]
+                    "content": prompt,
+                    "images": [image_base64]
                 }
             ],
             "stream": False,
@@ -111,10 +109,8 @@ class OllamaClient:
             "messages": [
                 {
                     "role": "user",
-                    "content": [
-                        {"type": "text", "text": prompt},
-                        {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{image_base64}"}}
-                    ]
+                    "content": prompt,
+                    "images": [image_base64]
                 }
             ],
             "stream": True,
