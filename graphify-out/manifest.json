@@ -1,0 +1,377 @@
+{
+  "C:\\IMP\\careercons\\start.sh": {
+    "mtime": 1779036373.6110222,
+    "ast_hash": "582d66871342f83f73f2fa22a68520b4",
+    "semantic_hash": "582d66871342f83f73f2fa22a68520b4"
+  },
+  "C:\\IMP\\careercons\\.opencode\\package.json": {
+    "mtime": 1779035757.2060142,
+    "ast_hash": "36da8f59257d063f5ef74f59e181690e",
+    "semantic_hash": "36da8f59257d063f5ef74f59e181690e"
+  },
+  "C:\\IMP\\careercons\\.opencode\\skills\\algorithmic-art\\templates\\generator_template.js": {
+    "mtime": 1779034848.6553576,
+    "ast_hash": "23a079953380f936470d6cf02df0c911",
+    "semantic_hash": "23a079953380f936470d6cf02df0c911"
+  },
+  "C:\\IMP\\careercons\\backend\\config.py": {
+    "mtime": 1779044894.4912803,
+    "ast_hash": "5771417bf3c363f37e9afa3bc5a3565e",
+    "semantic_hash": "5771417bf3c363f37e9afa3bc5a3565e"
+  },
+  "C:\\IMP\\careercons\\backend\\main.py": {
+    "mtime": 1779039052.3649693,
+    "ast_hash": "ba50be431b8dbb4a68cf08456c10a9e9",
+    "semantic_hash": "ba50be431b8dbb4a68cf08456c10a9e9"
+  },
+  "C:\\IMP\\careercons\\backend\\sessions_db.json": {
+    "mtime": 1779048867.7417028,
+    "ast_hash": "76238ab3c92fc0d32f9e0abbc740d0dd",
+    "semantic_hash": "76238ab3c92fc0d32f9e0abbc740d0dd"
+  },
+  "C:\\IMP\\careercons\\backend\\routers\\chat.py": {
+    "mtime": 1779045593.0231225,
+    "ast_hash": "a6c7e025031deef062d0af9a37b7be15",
+    "semantic_hash": "a6c7e025031deef062d0af9a37b7be15"
+  },
+  "C:\\IMP\\careercons\\backend\\routers\\image_analysis.py": {
+    "mtime": 1779042788.163144,
+    "ast_hash": "3ade030289702a5ecf79ba331e481f9f",
+    "semantic_hash": "3ade030289702a5ecf79ba331e481f9f"
+  },
+  "C:\\IMP\\careercons\\backend\\routers\\profile.py": {
+    "mtime": 1779036168.1756468,
+    "ast_hash": "75e6ca9da5a9b3185990f8c590bc91a9",
+    "semantic_hash": "75e6ca9da5a9b3185990f8c590bc91a9"
+  },
+  "C:\\IMP\\careercons\\backend\\routers\\report.py": {
+    "mtime": 1779046953.6754036,
+    "ast_hash": "18002517177aeba043b93c42f2ca2c08",
+    "semantic_hash": "18002517177aeba043b93c42f2ca2c08"
+  },
+  "C:\\IMP\\careercons\\backend\\routers\\session.py": {
+    "mtime": 1779036166.1115208,
+    "ast_hash": "1e1486fceef3514c13eb8c9e53671d71",
+    "semantic_hash": "1e1486fceef3514c13eb8c9e53671d71"
+  },
+  "C:\\IMP\\careercons\\backend\\routers\\vibe.py": {
+    "mtime": 1779036167.248376,
+    "ast_hash": "2a698be876c9b9d05bbfee216b310b29",
+    "semantic_hash": "2a698be876c9b9d05bbfee216b310b29"
+  },
+  "C:\\IMP\\careercons\\backend\\routers\\__init__.py": {
+    "mtime": 1779036164.9190996,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "C:\\IMP\\careercons\\backend\\schemas\\chat.py": {
+    "mtime": 1779036154.9007192,
+    "ast_hash": "2a30ff9b954842a35bc726df18ab2ad7",
+    "semantic_hash": "2a30ff9b954842a35bc726df18ab2ad7"
+  },
+  "C:\\IMP\\careercons\\backend\\schemas\\profile.py": {
+    "mtime": 1779041945.9421418,
+    "ast_hash": "fbf188db243741a14bd71883c546ebca",
+    "semantic_hash": "fbf188db243741a14bd71883c546ebca"
+  },
+  "C:\\IMP\\careercons\\backend\\schemas\\report.py": {
+    "mtime": 1779046319.407851,
+    "ast_hash": "85b481d873d8a29145f9bba45b4bb3a3",
+    "semantic_hash": "85b481d873d8a29145f9bba45b4bb3a3"
+  },
+  "C:\\IMP\\careercons\\backend\\schemas\\session.py": {
+    "mtime": 1779036153.4532526,
+    "ast_hash": "580806347a67c5e5a9ba078923559081",
+    "semantic_hash": "580806347a67c5e5a9ba078923559081"
+  },
+  "C:\\IMP\\careercons\\backend\\schemas\\__init__.py": {
+    "mtime": 1779036152.6439073,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "C:\\IMP\\careercons\\backend\\services\\ollama_client.py": {
+    "mtime": 1779046548.880068,
+    "ast_hash": "a1475e46b3be806318eedc3889b826d9",
+    "semantic_hash": "a1475e46b3be806318eedc3889b826d9"
+  },
+  "C:\\IMP\\careercons\\backend\\services\\orchestrator.py": {
+    "mtime": 1779042028.2896798,
+    "ast_hash": "61f1839bc33a6cfcec84b9d8a217e770",
+    "semantic_hash": "61f1839bc33a6cfcec84b9d8a217e770"
+  },
+  "C:\\IMP\\careercons\\backend\\services\\prompt_manager.py": {
+    "mtime": 1779036757.8721461,
+    "ast_hash": "b5dcdff3fc914996ce4882c93d7ba6ff",
+    "semantic_hash": "b5dcdff3fc914996ce4882c93d7ba6ff"
+  },
+  "C:\\IMP\\careercons\\backend\\services\\session_store.py": {
+    "mtime": 1779046299.729201,
+    "ast_hash": "9684c3cf8e171c38bba5317fa4005e8b",
+    "semantic_hash": "9684c3cf8e171c38bba5317fa4005e8b"
+  },
+  "C:\\IMP\\careercons\\backend\\services\\__init__.py": {
+    "mtime": 1779036158.0714407,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "C:\\IMP\\careercons\\frontend\\.eslintrc.json": {
+    "mtime": 1779036195.0267615,
+    "ast_hash": "5cc89077d438e3d0d0a8308ab7e06a5a",
+    "semantic_hash": "5cc89077d438e3d0d0a8308ab7e06a5a"
+  },
+  "C:\\IMP\\careercons\\frontend\\next-env.d.ts": {
+    "mtime": 1779045942.8569822,
+    "ast_hash": "2a74d3909800ca5467fa83b0ab4a4890",
+    "semantic_hash": "2a74d3909800ca5467fa83b0ab4a4890"
+  },
+  "C:\\IMP\\careercons\\frontend\\next.config.mjs": {
+    "mtime": 1779036195.0704517,
+    "ast_hash": "21958f5752add43cc47ab0ff5172cd46",
+    "semantic_hash": "21958f5752add43cc47ab0ff5172cd46"
+  },
+  "C:\\IMP\\careercons\\frontend\\package.json": {
+    "mtime": 1779036703.1326997,
+    "ast_hash": "0d6309f298f57410a908719ef01a85e3",
+    "semantic_hash": "0d6309f298f57410a908719ef01a85e3"
+  },
+  "C:\\IMP\\careercons\\frontend\\postcss.config.mjs": {
+    "mtime": 1779036195.0843241,
+    "ast_hash": "b7941c02b947e17ae32f67ae7e664ec8",
+    "semantic_hash": "b7941c02b947e17ae32f67ae7e664ec8"
+  },
+  "C:\\IMP\\careercons\\frontend\\tailwind.config.ts": {
+    "mtime": 1779038080.9193137,
+    "ast_hash": "82bd7212dc642afca35e8865c03bb105",
+    "semantic_hash": "82bd7212dc642afca35e8865c03bb105"
+  },
+  "C:\\IMP\\careercons\\frontend\\tsconfig.json": {
+    "mtime": 1779038353.1135907,
+    "ast_hash": "5d3848a002cb78e9266c60bdbe353065",
+    "semantic_hash": "5d3848a002cb78e9266c60bdbe353065"
+  },
+  "C:\\IMP\\careercons\\frontend\\app\\layout.tsx": {
+    "mtime": 1779038073.542504,
+    "ast_hash": "3d693fac57c85f00b05e00077d72afaa",
+    "semantic_hash": "3d693fac57c85f00b05e00077d72afaa"
+  },
+  "C:\\IMP\\careercons\\frontend\\app\\page.tsx": {
+    "mtime": 1779048591.409907,
+    "ast_hash": "c5732fa81bc3a4daf2fd6abe94da80bc",
+    "semantic_hash": "c5732fa81bc3a4daf2fd6abe94da80bc"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\AnalyzeOverlay.tsx": {
+    "mtime": 1779038162.6330178,
+    "ast_hash": "85b406356acb6a1e483eb2697469e428",
+    "semantic_hash": "85b406356acb6a1e483eb2697469e428"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\AnimatedProgressBar.tsx": {
+    "mtime": 1779038667.1242733,
+    "ast_hash": "b80a1e3dd803da37c3af5feaa413a095",
+    "semantic_hash": "b80a1e3dd803da37c3af5feaa413a095"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\Carousel3D.tsx": {
+    "mtime": 1779046616.1826746,
+    "ast_hash": "a14f6756de1969ea447fb0cefe19724b",
+    "semantic_hash": "a14f6756de1969ea447fb0cefe19724b"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\ChatBubble.tsx": {
+    "mtime": 1779038920.423247,
+    "ast_hash": "2a06c16f3e870c4dd594f94dcce127f4",
+    "semantic_hash": "2a06c16f3e870c4dd594f94dcce127f4"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\FieldCard.tsx": {
+    "mtime": 1779046339.373438,
+    "ast_hash": "fe337ea50102d681cbe76c904330ca91",
+    "semantic_hash": "fe337ea50102d681cbe76c904330ca91"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\JourneyReport.tsx": {
+    "mtime": 1779047509.5837991,
+    "ast_hash": "ffe062780a2a1df739d294a5cdbf70fb",
+    "semantic_hash": "ffe062780a2a1df739d294a5cdbf70fb"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\PathCard.tsx": {
+    "mtime": 1779038140.875866,
+    "ast_hash": "33a9b661b994dafe3f29496b3217d2d5",
+    "semantic_hash": "33a9b661b994dafe3f29496b3217d2d5"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\RoadmapTimeline.tsx": {
+    "mtime": 1779038154.485536,
+    "ast_hash": "ce694147ef7dfb7478270c65d4de4d9e",
+    "semantic_hash": "ce694147ef7dfb7478270c65d4de4d9e"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\TypingIndicator.tsx": {
+    "mtime": 1779043251.128778,
+    "ast_hash": "698a5ba2b21b003aa67d3b95ec8d42cf",
+    "semantic_hash": "698a5ba2b21b003aa67d3b95ec8d42cf"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\steps\\Step1_VibeCheck.tsx": {
+    "mtime": 1779040098.170034,
+    "ast_hash": "d5c28fa0c7ec433ccdcc0760b1a6bf0e",
+    "semantic_hash": "d5c28fa0c7ec433ccdcc0760b1a6bf0e"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\steps\\Step2_AcademicProfile.tsx": {
+    "mtime": 1779048700.5674796,
+    "ast_hash": "dcdfe6901c9baf36908a1d799edccd65",
+    "semantic_hash": "dcdfe6901c9baf36908a1d799edccd65"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\steps\\Step3_ChatInterface.tsx": {
+    "mtime": 1779044488.246405,
+    "ast_hash": "02377dee432b437d2877c67e90e64ba8",
+    "semantic_hash": "02377dee432b437d2877c67e90e64ba8"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\steps\\Step4_ReportReveal.tsx": {
+    "mtime": 1779046480.5619001,
+    "ast_hash": "b6b73807fbdf3f654c2b83036135b4e7",
+    "semantic_hash": "b6b73807fbdf3f654c2b83036135b4e7"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\ui\\badge.tsx": {
+    "mtime": 1779038175.996431,
+    "ast_hash": "799c7966f1bc730a4de9a05e9a1623b8",
+    "semantic_hash": "799c7966f1bc730a4de9a05e9a1623b8"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\ui\\button.tsx": {
+    "mtime": 1779038169.3123846,
+    "ast_hash": "1d4640e6cf2bbebd90d4dd0cbabde8d6",
+    "semantic_hash": "1d4640e6cf2bbebd90d4dd0cbabde8d6"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\ui\\card.tsx": {
+    "mtime": 1779038172.3030896,
+    "ast_hash": "40a924055f2eac2e1b358234c48338b9",
+    "semantic_hash": "40a924055f2eac2e1b358234c48338b9"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\ui\\dialog.tsx": {
+    "mtime": 1779038194.9357884,
+    "ast_hash": "281ba60e733003d9ebfc398f6a04b347",
+    "semantic_hash": "281ba60e733003d9ebfc398f6a04b347"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\ui\\input.tsx": {
+    "mtime": 1779038173.9949372,
+    "ast_hash": "07b18b26aaa7ecf127e5eb8660f73e5f",
+    "semantic_hash": "07b18b26aaa7ecf127e5eb8660f73e5f"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\ui\\select.tsx": {
+    "mtime": 1779038190.369879,
+    "ast_hash": "c6b917d3baa16c5bfe2f24fa6b0f95a9",
+    "semantic_hash": "c6b917d3baa16c5bfe2f24fa6b0f95a9"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\ui\\slider.tsx": {
+    "mtime": 1779048664.6829078,
+    "ast_hash": "4e0fefb602a8519de38f80d3e415c37a",
+    "semantic_hash": "4e0fefb602a8519de38f80d3e415c37a"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\ui\\switch.tsx": {
+    "mtime": 1779038188.2266543,
+    "ast_hash": "d547ef9c470fcf573439194c3795e7fa",
+    "semantic_hash": "d547ef9c470fcf573439194c3795e7fa"
+  },
+  "C:\\IMP\\careercons\\frontend\\components\\ui\\tabs.tsx": {
+    "mtime": 1779038192.2798264,
+    "ast_hash": "effe8e8059a54dc2770d00398b4c29df",
+    "semantic_hash": "effe8e8059a54dc2770d00398b4c29df"
+  },
+  "C:\\IMP\\careercons\\frontend\\context\\ChatContext.tsx": {
+    "mtime": 1779036277.782448,
+    "ast_hash": "f85211bc814e3bf0c4a32dde6f908869",
+    "semantic_hash": "f85211bc814e3bf0c4a32dde6f908869"
+  },
+  "C:\\IMP\\careercons\\frontend\\context\\SessionContext.tsx": {
+    "mtime": 1779036274.986848,
+    "ast_hash": "753282f33766ef3dd4d84bee4711201e",
+    "semantic_hash": "753282f33766ef3dd4d84bee4711201e"
+  },
+  "C:\\IMP\\careercons\\frontend\\hooks\\useSSE.ts": {
+    "mtime": 1779036280.6760788,
+    "ast_hash": "7234021a0d595cea027cb00d60f3005c",
+    "semantic_hash": "7234021a0d595cea027cb00d60f3005c"
+  },
+  "C:\\IMP\\careercons\\frontend\\lib\\animations.ts": {
+    "mtime": 1779037348.88053,
+    "ast_hash": "a086e04f442bfe7040d324c3d1808212",
+    "semantic_hash": "a086e04f442bfe7040d324c3d1808212"
+  },
+  "C:\\IMP\\careercons\\frontend\\lib\\api.ts": {
+    "mtime": 1779046918.680174,
+    "ast_hash": "4337e029560e6567838ac4643a70cdc5",
+    "semantic_hash": "4337e029560e6567838ac4643a70cdc5"
+  },
+  "C:\\IMP\\careercons\\frontend\\lib\\utils.ts": {
+    "mtime": 1779036265.851737,
+    "ast_hash": "ea1c194ee828369e6fcdde84b4d8b8ba",
+    "semantic_hash": "ea1c194ee828369e6fcdde84b4d8b8ba"
+  },
+  "C:\\IMP\\careercons\\frontend\\types\\index.ts": {
+    "mtime": 1779041950.8200521,
+    "ast_hash": "272f04800a3677def81c02c04fa31035",
+    "semantic_hash": "272f04800a3677def81c02c04fa31035"
+  },
+  "C:\\IMP\\careercons\\PLAN.md": {
+    "mtime": 1779035423.8236086,
+    "ast_hash": "048a4a367d73119e4f46dda6108c9e08",
+    "semantic_hash": "048a4a367d73119e4f46dda6108c9e08"
+  },
+  "C:\\IMP\\careercons\\poppy-ui.html": {
+    "mtime": 1779037666.3346884,
+    "ast_hash": "115c6a550e17dd44734fd79c488a07e2",
+    "semantic_hash": "115c6a550e17dd44734fd79c488a07e2"
+  },
+  "C:\\IMP\\careercons\\.opencode\\skills\\algorithmic-art\\SKILL.md": {
+    "mtime": 1779034714.4662178,
+    "ast_hash": "bf8736689413bd6553761d74d7b57f7f",
+    "semantic_hash": "bf8736689413bd6553761d74d7b57f7f"
+  },
+  "C:\\IMP\\careercons\\.opencode\\skills\\algorithmic-art\\templates\\viewer.html": {
+    "mtime": 1779034807.6752317,
+    "ast_hash": "f9b9e2e96ad1eed45d726c0be925c43f",
+    "semantic_hash": "f9b9e2e96ad1eed45d726c0be925c43f"
+  },
+  "C:\\IMP\\careercons\\.opencode\\skills\\find-skills\\SKILL.md": {
+    "mtime": 1779035723.2045476,
+    "ast_hash": "efcaee1dd97ebac4f2f4071585cff6b5",
+    "semantic_hash": "efcaee1dd97ebac4f2f4071585cff6b5"
+  },
+  "C:\\IMP\\careercons\\backend\\requirements.txt": {
+    "mtime": 1779038375.3078952,
+    "ast_hash": "2cf6aaaf6667d624724a1f561c8c2dd2",
+    "semantic_hash": "2cf6aaaf6667d624724a1f561c8c2dd2"
+  },
+  "C:\\IMP\\careercons\\backend\\prompts\\chat.md": {
+    "mtime": 1779036779.7918725,
+    "ast_hash": "8c4072b3b1d4db361cdda8ef6e954637",
+    "semantic_hash": "8c4072b3b1d4db361cdda8ef6e954637"
+  },
+  "C:\\IMP\\careercons\\backend\\prompts\\chat_json.md": {
+    "mtime": 1779044987.7810001,
+    "ast_hash": "0cfc5b6ab958d347620f8d87b5a74f19",
+    "semantic_hash": "0cfc5b6ab958d347620f8d87b5a74f19"
+  },
+  "C:\\IMP\\careercons\\backend\\prompts\\options.md": {
+    "mtime": 1779044467.0590985,
+    "ast_hash": "ce7a0bfc28310eb96e6c25172b0e7e95",
+    "semantic_hash": "ce7a0bfc28310eb96e6c25172b0e7e95"
+  },
+  "C:\\IMP\\careercons\\backend\\prompts\\profile_analysis.md": {
+    "mtime": 1779036786.4849026,
+    "ast_hash": "553fd734facc98c051892f65cc419d15",
+    "semantic_hash": "553fd734facc98c051892f65cc419d15"
+  },
+  "C:\\IMP\\careercons\\backend\\prompts\\report_generation.md": {
+    "mtime": 1779036784.9674861,
+    "ast_hash": "1240339542838f178903d35ad2e1c6df",
+    "semantic_hash": "1240339542838f178903d35ad2e1c6df"
+  },
+  "C:\\IMP\\careercons\\backend\\prompts\\system.md": {
+    "mtime": 1779036175.8092792,
+    "ast_hash": "82dca9affa254eda74b6cf06530facb5",
+    "semantic_hash": "82dca9affa254eda74b6cf06530facb5"
+  },
+  "C:\\IMP\\careercons\\backend\\prompts\\vibe.md": {
+    "mtime": 1779036177.8126812,
+    "ast_hash": "70df9fed8c9c9ff02a558a16f3676b71",
+    "semantic_hash": "70df9fed8c9c9ff02a558a16f3676b71"
+  },
+  "C:\\IMP\\careercons\\frontend\\README.md": {
+    "mtime": 1779036195.05663,
+    "ast_hash": "f15aaa42d5d299d091b1171097ea56ad",
+    "semantic_hash": "f15aaa42d5d299d091b1171097ea56ad"
+  }
+}

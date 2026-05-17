@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poppy — Career Counselor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0a0a0f; color: #f5f5f7; overflow-x: hidden; }
+    ::selection { background: #6366f1; color: #fff; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0a0a0f; }
+    ::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 3px; }
+
+    .hero-gradient {
+      background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(99,102,241,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse 60% 50% at 80% 80%, rgba(139,92,246,0.1) 0%, transparent 50%),
+                  #0a0a0f;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .glass-hover:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(99,102,241,0.3);
+    }
+
+    .tilt-card {
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .tilt-card:hover {
+      transform: rotateY(-4deg) rotateX(2deg) translateZ(10px);
+    }
+    .tilt-card .glow {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 0.4s;
+      background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(99,102,241,0.1), transparent 50%);
+    }
+    .tilt-card:hover .glow { opacity: 1; }
+
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .reveal-up.visible { opacity: 1; transform: translateY(0); }
+
+    .typing-cursor::after {
+      content: '|';
+      animation: blink 1s step-end infinite;
+      color: #6366f1;
+      font-weight: 300;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    .float {
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .grid-dots {
+      background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    .shimmer {
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+      background-size: 200% 100%;
+      animation: shimmer 3s ease-in-out infinite;
+    }
+    @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+
+    .page { min-height: 100vh; }
+    .nav-link { position: relative; cursor: pointer; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      height: 1px;
+      background: #6366f1;
+      transform: scaleX(0);
+      transition: transform 0.3s;
+    }
+    .nav-link:hover::after { transform: scaleX(1); }
+
+    .toggle { position: relative; width: 44px; height: 24px; border-radius: 12px; cursor: pointer; transition: background 0.3s; }
+    .toggle.active { background: #6366f1; }
+    .toggle:not(.active) { background: rgba(255,255,255,0.12); }
+    .toggle .knob {
+      position: absolute; top: 2px; left: 2px; width: 20px; height: 20px;
+      border-radius: 50%; background: #fff; transition: transform 0.3s cubic-bezier(0.23,1,0.32,1);
+    }
+    .toggle.active .knob { transform: translateX(20px); }
+
+    .custom-range {
+      -webkit-appearance: none; appearance: none;
+      width: 100%; height: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px; outline: none;
+    }
+    .custom-range::-webkit-slider-thumb {
+      -webkit-appearance: none; appearance: none;
+      width: 18px; height: 18px;
+      background: #6366f1;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(99,102,241,0.4);
+      transition: box-shadow 0.2s;
+    }
+    .custom-range::-webkit-slider-thumb:hover { box-shadow: 0 0 30px rgba(99,102,241,0.6); }
+    .custom-range::-moz-range-thumb {
+      width: 18px; height: 18px;
+      background: #6366f1;
+      border-radius: 50%;
+      border: none; cursor: pointer;
+    }
+
+    .tab { cursor: pointer; position: relative; }
+    .tab.active::after {
+      content: ''; position: absolute; bottom: -1px; left: 0; right: 0;
+      height: 2px; background: #6366f1;
+      border-radius: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.5rem !important; line-height: 1.1 !important; }
+      .hero-subtitle { font-size: 1rem !important; }
+    }
+  </style>
+</head>
+<body class="grid-dots">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 glass" style="border-bottom:1px solid rgba(255,255,255,0.06);">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-10">
+        <span class="text-lg font-semibold tracking-tight" style="letter-spacing:-0.02em;">Poppy</span>
+        <div class="hidden md:flex items-center gap-8 text-sm" style="color:rgba(255,255,255,0.5);">
+          <span class="nav-link" onclick="navigate('hero')">Home</span>
+          <span class="nav-link" onclick="navigate('features')">Features</span>
+          <span class="nav-link" onclick="navigate('settings')">Settings</span>
+          <span class="nav-link" onclick="navigate('about')">About</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="text-sm" style="color:rgba(255,255,255,0.4);">Sign In</span>
+        <span class="px-5 py-2 text-sm font-medium rounded-xl" style="background:#6366f1;color:#fff;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.background='#4f46e5';this.style.transform='scale(0.97)'" onmouseout="this.style.background='#6366f1';this.style.transform='scale(1)'">Get Started</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page 1: Hero -->
+  <section id="hero" class="page hero-gradient flex flex-col items-center justify-center px-6" style="padding-top:80px;min-height:100vh;">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase shimmer reveal-up visible" style="color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.08);letter-spacing:0.08em;">
+        <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#6366f1;box-shadow:0 0 8px rgba(99,102,241,0.6);"></span>
+        AI-Powered Career Discovery
+      </div>
+
+      <h1 class="hero-title text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mt-10 leading-none" style="letter-spacing:-0.03em;line-height:1.05;">
+        Find Your<br/>
+        <span style="background:linear-gradient(135deg,#818cf8,#c084fc,#f472b6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">True Path</span>
+      </h1>
+
+      <p class="hero-subtitle text-lg md:text-xl mt-6 max-w-2xl mx-auto" style="color:rgba(255,255,255,0.5);line-height:1.7;">
+        An intelligent career counselor that learns who you are through a deep, structured interview — then reveals your ideal career paths with Indian context.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+        <span class="px-8 py-3.5 text-base font-medium rounded-xl" style="background:#6366f1;color:#fff;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.background='#4f46e5';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#6366f1';this.style.transform='translateY(0)'">
+          Start Your Journey
+        </span>
+        <span class="px-8 py-3.5 text-base font-medium rounded-xl glass glass-hover flex items-center gap-2" style="cursor:pointer;">
+          <i data-lucide="play-circle" style="width:18px;height:18px;stroke-width:1.5;"></i>
+          See How It Works
+        </span>
+      </div>
+
+      <div class="flex items-center justify-center gap-8 mt-12 text-xs" style="color:rgba(255,255,255,0.3);">
+        <span>No account needed</span>
+        <span style="width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.2);"></span>
+        <span>10-min interview</span>
+        <span style="width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.2);"></span>
+        <span>Personalized report</span>
+      </div>
+    </div>
+
+    <!-- 3D floating cards -->
+    <div class="relative w-full max-w-5xl mx-auto mt-16 md:mt-24" style="height:280px;">
+      <div class="tilt-card absolute" style="width:200px;height:140px;top:10%;left:5%;" onmousemove="tilt(event)" onmouseleave="untilt(event)">
+        <div class="glow"></div>
+        <div class="rounded-2xl p-5 glass float" style="height:100%;">
+          <div style="color:#818cf8;font-size:1.5rem;font-weight:600;">98%</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.75rem;line-height:1.4;margin-top:4px;">Career path<br/>match accuracy</div>
+        </div>
+      </div>
+      <div class="tilt-card absolute" style="width:220px;height:150px;top:50%;left:12%;" onmousemove="tilt(event)" onmouseleave="untilt(event)">
+        <div class="glow"></div>
+        <div class="rounded-2xl p-5 glass float" style="height:100%;animation-delay:-2s;">
+          <div style="color:#c084fc;font-size:1.5rem;font-weight:600;">10</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.75rem;line-height:1.4;margin-top:4px;">Deep-dive<br/>questions</div>
+        </div>
+      </div>
+      <div class="tilt-card absolute" style="width:200px;height:140px;top:20%;right:8%;" onmousemove="tilt(event)" onmouseleave="untilt(event)">
+        <div class="glow"></div>
+        <div class="rounded-2xl p-5 glass float" style="height:100%;animation-delay:-4s;">
+          <div style="color:#f472b6;font-size:1.5rem;font-weight:600;">INR</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.75rem;line-height:1.4;margin-top:4px;">Indian salary<br/>context</div>
+        </div>
+      </div>
+      <div class="tilt-card absolute hidden md:block" style="width:180px;height:130px;top:55%;right:5%;" onmousemove="tilt(event)" onmouseleave="untilt(event)">
+        <div class="glow"></div>
+        <div class="rounded-2xl p-5 glass float" style="height:100%;animation-delay:-1s;">
+          <div style="color:#60a5fa;font-size:1.5rem;font-weight:600;">3</div>
+          <div style="color:rgba(255,255,255,0.5);font-size:0.75rem;line-height:1.4;margin-top:4px;">Top career<br/>paths</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:80px;display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;" onclick="navigate('features')">
+      <span style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.25);">Explore</span>
+      <i data-lucide="chevron-down" style="width:20px;height:20px;stroke-width:1.5;color:rgba(255,255,255,0.25);" class="float"></i>
+    </div>
+  </section>
+
+  <!-- Page 2: Features -->
+  <section id="features" class="page flex flex-col items-center justify-center px-6" style="padding:120px 0;min-height:100vh;">
+    <div class="max-w-6xl mx-auto w-full">
+      <div class="text-center">
+        <span class="inline-block text-xs font-medium tracking-widest uppercase" style="color:rgba(255,255,255,0.4);letter-spacing:0.1em;">How It Works</span>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mt-3" style="letter-spacing:-0.02em;">Three Phases, One <span style="background:linear-gradient(135deg,#818cf8,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Clear Direction</span></h2>
+        <p class="text-base mt-4 max-w-xl mx-auto" style="color:rgba(255,255,255,0.45);line-height:1.7;">A structured journey from discovering your vibe to getting a personalized career report with full Indian context.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5 mt-16">
+        <div class="tilt-card rounded-2xl p-7 glass glass-hover" style="position:relative;" onmousemove="tilt(event)" onmouseleave="untilt(event)">
+          <div class="glow"></div>
+          <div style="display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:14px;background:rgba(99,102,241,0.15);margin-bottom:20px;">
+            <i data-lucide="sparkles" style="width:22px;height:22px;stroke-width:1.5;color:#818cf8;"></i>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight" style="letter-spacing:-0.01em;">Vibe Check</h3>
+          <p class="text-sm mt-2" style="color:rgba(255,255,255,0.45);line-height:1.7;">Pick what excites you — Tech, Medicine, Commerce, Creative Arts, Law, or Sciences. We build from there.</p>
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
+            <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">6 career fields</span>
+          </div>
+        </div>
+
+        <div class="tilt-card rounded-2xl p-7 glass glass-hover" style="position:relative;" onmousemove="tilt(event)" onmouseleave="untilt(event)">
+          <div class="glow"></div>
+          <div style="display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:14px;background:rgba(192,132,252,0.15);margin-bottom:20px;">
+            <i data-lucide="message-square-text" style="width:22px;height:22px;stroke-width:1.5;color:#c084fc;"></i>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight" style="letter-spacing:-0.01em;">Deep Interview</h3>
+          <p class="text-sm mt-2" style="color:rgba(255,255,255,0.45);line-height:1.7;">10 structured questions across two phases. AI listens, acknowledges, and adapts to your answers in real time.</p>
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
+            <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">6 foundation + 4 deep dive</span>
+          </div>
+        </div>
+
+        <div class="tilt-card rounded-2xl p-7 glass glass-hover" style="position:relative;" onmousemove="tilt(event)" onmouseleave="untilt(event)">
+          <div class="glow"></div>
+          <div style="display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:14px;background:rgba(244,114,182,0.15);margin-bottom:20px;">
+            <i data-lucide="compass" style="width:22px;height:22px;stroke-width:1.5;color:#f472b6;"></i>
+          </div>
+          <h3 class="text-lg font-semibold tracking-tight" style="letter-spacing:-0.01em;">Career Report</h3>
+          <p class="text-sm mt-2" style="color:rgba(255,255,255,0.45);line-height:1.7;">Get your top 3 career paths with roadmaps, Indian exams, target companies, and salary ranges in INR.</p>
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.06);">
+            <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">IITs, NITs, IIITs & more</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-12">
+        <span class="px-6 py-3 text-sm font-medium rounded-xl glass glass-hover flex items-center gap-2" style="cursor:pointer;" onclick="navigate('settings')">
+          Explore Settings
+          <i data-lucide="arrow-right" style="width:16px;height:16px;stroke-width:1.5;"></i>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 3: Settings -->
+  <section id="settings" class="page px-6" style="padding:120px 0;min-height:100vh;">
+    <div class="max-w-3xl mx-auto w-full">
+      <div class="text-center">
+        <span class="inline-block text-xs font-medium tracking-widest uppercase" style="color:rgba(255,255,255,0.4);letter-spacing:0.1em;">Preferences</span>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mt-3" style="letter-spacing:-0.02em;">Settings</h2>
+        <p class="text-base mt-4 max-w-lg mx-auto" style="color:rgba(255,255,255,0.45);line-height:1.7;">Customize your career counseling experience.</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex items-center gap-8 mt-12 border-b" style="border-color:rgba(255,255,255,0.06);">
+        <span class="tab active text-sm font-medium pb-3" style="color:#818cf8;" onclick="switchTab(this,'profile')">Profile</span>
+        <span class="tab text-sm font-medium pb-3" style="color:rgba(255,255,255,0.4);" onclick="switchTab(this,'notifications')">Notifications</span>
+        <span class="tab text-sm font-medium pb-3" style="color:rgba(255,255,255,0.4);" onclick="switchTab(this,'appearance')">Appearance</span>
+      </div>
+
+      <!-- Profile Tab -->
+      <div id="tab-profile" class="tab-content space-y-6 mt-8">
+        <div class="rounded-2xl p-6 glass">
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#c084fc);display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:600;color:#fff;">A</div>
+            <div>
+              <div class="text-base font-semibold" style="letter-spacing:-0.01em;">Ananya Sharma</div>
+              <div style="font-size:0.85rem;color:rgba(255,255,255,0.4);">ananya@example.com</div>
+            </div>
+            <span style="margin-left:auto;font-size:0.8rem;color:#818cf8;cursor:pointer;">Edit</span>
+          </div>
+        </div>
+
+        <div class="rounded-2xl p-6 glass">
+          <label class="text-sm font-medium" style="color:rgba(255,255,255,0.8);">Education Level</label>
+          <div style="position:relative;margin-top:8px;">
+            <select style="width:100%;height:44px;border-radius:12px;padding:0 40px 0 14px;font-size:0.9rem;background:rgba(255,255,255,0.06);color:#f5f5f7;border:1px solid rgba(255,255,255,0.08);outline:none;appearance:none;cursor:pointer;">
+              <option style="background:#1a1a2e;">Pursuing UG</option>
+              <option style="background:#1a1a2e;">UG Completed</option>
+              <option style="background:#1a1a2e;">Pursuing PG</option>
+              <option style="background:#1a1a2e;">PG Completed</option>
+            </select>
+            <i data-lucide="chevron-down" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke-width:1.5;pointer-events:none;color:rgba(255,255,255,0.3);"></i>
+          </div>
+        </div>
+
+        <div class="rounded-2xl p-6 glass">
+          <label class="text-sm font-medium" style="color:rgba(255,255,255,0.8);">Stream (12th)</label>
+          <div style="display:flex;gap:8px;margin-top:8px;">
+            <span class="stream-chip px-4 py-2 rounded-lg text-sm font-medium" style="background:#6366f1;color:#fff;cursor:pointer;transition:all 0.2s;" onclick="selectStream(this)">Science</span>
+            <span class="stream-chip px-4 py-2 rounded-lg text-sm font-medium" style="background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);cursor:pointer;transition:all 0.2s;" onclick="selectStream(this)">Commerce</span>
+            <span class="stream-chip px-4 py-2 rounded-lg text-sm font-medium" style="background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5);cursor:pointer;transition:all 0.2s;" onclick="selectStream(this)">Arts</span>
+          </div>
+        </div>
+
+        <div class="rounded-2xl p-6 glass">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div class="text-sm font-medium" style="color:rgba(255,255,255,0.8);">Location</div>
+              <div style="font-size:0.8rem;color:rgba(255,255,255,0.35);margin-top:2px;">Used for local exam & college recommendations</div>
+            </div>
+            <span style="font-size:0.85rem;color:#818cf8;cursor:pointer;">Change</span>
+          </div>
+          <div style="margin-top:10px;font-size:0.9rem;color:rgba(255,255,255,0.5);">Mumbai, Maharashtra</div>
+        </div>
+
+        <div class="rounded-2xl p-6 glass">
+          <label class="text-sm font-medium" style="color:rgba(255,255,255,0.8);">Languages Known</label>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;">
+            <span style="padding:6px 14px;border-radius:20px;font-size:0.8rem;background:rgba(99,102,241,0.15);color:#818cf8;display:flex;align-items:center;gap:6px;">English <span style="cursor:pointer;opacity:0.6;">✕</span></span>
+            <span style="padding:6px 14px;border-radius:20px;font-size:0.8rem;background:rgba(99,102,241,0.15);color:#818cf8;display:flex;align-items:center;gap:6px;">Hindi <span style="cursor:pointer;opacity:0.6;">✕</span></span>
+            <span style="padding:6px 14px;border-radius:20px;font-size:0.8rem;background:rgba(99,102,241,0.15);color:#818cf8;display:flex;align-items:center;gap:6px;">Marathi <span style="cursor:pointer;opacity:0.6;">✕</span></span>
+            <span style="padding:6px 14px;border-radius:20px;font-size:0.8rem;border:1px dashed rgba(255,255,255,0.2);color:rgba(255,255,255,0.3);cursor:pointer;">+ Add</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notifications Tab -->
+      <div id="tab-notifications" class="tab-content space-y-4 mt-8" style="display:none;">
+        <div class="rounded-2xl p-6 glass">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div class="text-sm font-medium" style="color:rgba(255,255,255,0.8);">Email Reports</div>
+              <div style="font-size:0.8rem;color:rgba(255,255,255,0.35);margin-top:2px;">Receive your career report via email</div>
+            </div>
+            <div class="toggle active" onclick="this.classList.toggle('active')"><div class="knob"></div></div>
+          </div>
+        </div>
+        <div class="rounded-2xl p-6 glass">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div class="text-sm font-medium" style="color:rgba(255,255,255,0.8);">Weekly Insights</div>
+              <div style="font-size:0.8rem;color:rgba(255,255,255,0.35);margin-top:2px;">Career tips and exam updates every Monday</div>
+            </div>
+            <div class="toggle" onclick="this.classList.toggle('active')"><div class="knob"></div></div>
+          </div>
+        </div>
+        <div class="rounded-2xl p-6 glass">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div class="text-sm font-medium" style="color:rgba(255,255,255,0.8);">Product Updates</div>
+              <div style="font-size:0.8rem;color:rgba(255,255,255,0.35);margin-top:2px;">New features and improvements</div>
+            </div>
+            <div class="toggle active" onclick="this.classList.toggle('active')"><div class="knob"></div></div>
+          </div>
+        </div>
+        <div class="rounded-2xl p-6 glass">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div class="text-sm font-medium" style="color:rgba(255,255,255,0.8);">Exam Reminders</div>
+              <div style="font-size:0.8rem;color:rgba(255,255,255,0.35);margin-top:2px;">JEE, NEET, CUET and other exam deadlines</div>
+            </div>
+            <div class="toggle active" onclick="this.classList.toggle('active')"><div class="knob"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Appearance Tab -->
+      <div id="tab-appearance" class="tab-content space-y-6 mt-8" style="display:none;">
+        <div class="rounded-2xl p-6 glass">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div>
+              <div class="text-sm font-medium" style="color:rgba(255,255,255,0.8);">Theme</div>
+              <div style="font-size:0.8rem;color:rgba(255,255,255,0.35);margin-top:2px;">Dark mode is optimized for your experience</div>
+            </div>
+            <div class="toggle active" onclick="this.classList.toggle('active')"><div class="knob"></div></div>
+          </div>
+        </div>
+        <div class="rounded-2xl p-6 glass">
+          <label class="text-sm font-medium" style="color:rgba(255,255,255,0.8);">Motion Intensity</label>
+          <div style="margin-top:12px;">
+            <input type="range" class="custom-range" min="0" max="100" value="80" oninput="document.getElementById('motion-val').textContent=this.value+'%'" />
+            <div style="display:flex;justify-content:space-between;margin-top:6px;">
+              <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Reduced</span>
+              <span id="motion-val" style="font-size:0.8rem;color:#818cf8;font-weight:500;">80%</span>
+              <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Full</span>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl p-6 glass">
+          <label class="text-sm font-medium" style="color:rgba(255,255,255,0.8);">Font Size</label>
+          <div style="margin-top:12px;">
+            <input type="range" class="custom-range" min="80" max="120" value="100" oninput="document.getElementById('font-val').textContent=this.value+'%'" />
+            <div style="display:flex;justify-content:space-between;margin-top:6px;">
+              <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Smaller</span>
+              <span id="font-val" style="font-size:0.8rem;color:#818cf8;font-weight:500;">100%</span>
+              <span style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Larger</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 4: About -->
+  <section id="about" class="page px-6" style="padding:120px 0;min-height:100vh;">
+    <div class="max-w-4xl mx-auto w-full text-center">
+      <span class="inline-block text-xs font-medium tracking-widest uppercase" style="color:rgba(255,255,255,0.4);letter-spacing:0.1em;">About</span>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight mt-3" style="letter-spacing:-0.02em;">Built for <span style="background:linear-gradient(135deg,#818cf8,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Indian Students</span></h2>
+      <p class="text-base mt-4 max-w-2xl mx-auto" style="color:rgba(255,255,255,0.45);line-height:1.7;">
+        Every feature — from the exam database to salary ranges — is tailored for the Indian education system. We understand the journey from Class 10 boards to competitive exams to your dream career.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-5 mt-16 text-left max-w-3xl mx-auto">
+        <div class="rounded-2xl p-6 glass">
+          <i data-lucide="graduation-cap" style="width:22px;height:22px;stroke-width:1.5;color:#818cf8;margin-bottom:12px;"></i>
+          <h4 class="text-sm font-semibold tracking-tight">Exam-Aware</h4>
+          <p class="text-xs mt-2" style="color:rgba(255,255,255,0.4);line-height:1.6;">JEE Main, JEE Advanced, NEET, CUET, NATA, CLAT — we know the exams that matter.</p>
+        </div>
+        <div class="rounded-2xl p-6 glass">
+          <i data-lucide="banknote" style="width:22px;height:22px;stroke-width:1.5;color:#c084fc;margin-bottom:12px;"></i>
+          <h4 class="text-sm font-semibold tracking-tight">Salary in INR</h4>
+          <p class="text-xs mt-2" style="color:rgba(255,255,255,0.4);line-height:1.6;">Realistic salary ranges for Indian freshers and experienced professionals.</p>
+        </div>
+        <div class="rounded-2xl p-6 glass">
+          <i data-lucide="building" style="width:22px;height:22px;stroke-width:1.5;color:#f472b6;margin-bottom:12px;"></i>
+          <h4 class="text-sm font-semibold tracking-tight">Company Database</h4>
+          <p class="text-xs mt-2" style="color:rgba(255,255,255,0.4);line-height:1.6;">TCS, Infosys, Reliance, Biocon, Zomato — target companies per career path.</p>
+        </div>
+        <div class="rounded-2xl p-6 glass">
+          <i data-lucide="route" style="width:22px;height:22px;stroke-width:1.5;color:#60a5fa;margin-bottom:12px;"></i>
+          <h4 class="text-sm font-semibold tracking-tight">Step-by-Step Roadmaps</h4>
+          <p class="text-xs mt-2" style="color:rgba(255,255,255,0.4);line-height:1.6;">From 12th grade through college to your first job — clear milestones.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:60px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.06);">
+        <p class="text-xs" style="color:rgba(255,255,255,0.2);">Built with ❤️ for the next generation of Indian professionals</p>
+        <div style="display:flex;justify-content:center;gap:24px;margin-top:16px;">
+          <i data-lucide="twitter" style="width:18px;height:18px;stroke-width:1.5;color:rgba(255,255,255,0.25);cursor:pointer;transition:color 0.2s;" onmouseover="this.style.color='#818cf8'" onmouseout="this.style.color='rgba(255,255,255,0.25)'"></i>
+          <i data-lucide="github" style="width:18px;height:18px;stroke-width:1.5;color:rgba(255,255,255,0.25);cursor:pointer;transition:color 0.2s;" onmouseover="this.style.color='#818cf8'" onmouseout="this.style.color='rgba(255,255,255,0.25)'"></i>
+          <i data-lucide="linkedin" style="width:18px;height:18px;stroke-width:1.5;color:rgba(255,255,255,0.25);cursor:pointer;transition:color 0.2s;" onmouseover="this.style.color='#818cf8'" onmouseout="this.style.color='rgba(255,255,255,0.25)'"></i>
+          <i data-lucide="mail" style="width:18px;height:18px;stroke-width:1.5;color:rgba(255,255,255,0.25);cursor:pointer;transition:color 0.2s;" onmouseover="this.style.color='#818cf8'" onmouseout="this.style.color='rgba(255,255,255,0.25)'"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="padding:24px 0;border-top:1px solid rgba(255,255,255,0.06);">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div style="display:flex;align-items:center;gap:6px;">
+        <span class="text-sm font-semibold tracking-tight">Poppy</span>
+        <span style="font-size:0.7rem;color:rgba(255,255,255,0.2);">Career Counselor</span>
+      </div>
+      <div style="display:flex;gap:20px;font-size:0.75rem;color:rgba(255,255,255,0.3);">
+        <span style="cursor:pointer;">Privacy</span>
+        <span style="cursor:pointer;">Terms</span>
+        <span style="cursor:pointer;">Contact</span>
+      </div>
+      <span style="font-size:0.7rem;color:rgba(255,255,255,0.2);">&copy; 2026 Poppy. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    function navigate(id) {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function tilt(e) {
+      const card = e.currentTarget;
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `perspective(1000px) rotateY(${x * 6}deg) rotateX(${y * -6}deg) translateZ(8px)`;
+      card.style.setProperty('--mx', (e.clientX - rect.left) + 'px');
+      card.style.setProperty('--my', (e.clientY - rect.top) + 'px');
+    }
+
+    function untilt(e) {
+      e.currentTarget.style.transform = '';
+    }
+
+    function selectStream(el) {
+      document.querySelectorAll('.stream-chip').forEach(c => {
+        c.style.background = 'rgba(255,255,255,0.06)';
+        c.style.color = 'rgba(255,255,255,0.5)';
+      });
+      el.style.background = '#6366f1';
+      el.style.color = '#fff';
+    }
+
+    function switchTab(el, tabName) {
+      document.querySelectorAll('.tab').forEach(t => {
+        t.classList.remove('active');
+        t.style.color = 'rgba(255,255,255,0.4)';
+      });
+      el.classList.add('active');
+      el.style.color = '#818cf8';
+      document.querySelectorAll('.tab-content').forEach(tc => tc.style.display = 'none');
+      document.getElementById('tab-' + tabName).style.display = '';
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

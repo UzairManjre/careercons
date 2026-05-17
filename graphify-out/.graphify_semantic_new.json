@@ -1,0 +1,1008 @@
+{
+  "nodes": [
+    {
+      "id": "plan_poppy",
+      "label": "Poppy Career Counseling App",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "FastAPI+Next.js stack chosen for async SSE streaming and rapid prototyping; Ollama/Gemma 2B for fully local AI with no API costs; in-memory session dict (no DB) for MVP simplicity; Shadcn/ui + Tailwind for fast, accessible UI; Framer Motion for polished STEP transitions; Indian education system as core domain constraint."
+    },
+    {
+      "id": "plan_backend",
+      "label": "Backend Architecture",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_frontend",
+      "label": "Frontend Architecture",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_fastapi",
+      "label": "FastAPI Framework",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_ollama",
+      "label": "Ollama AI Client",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_gemma_2b",
+      "label": "Gemma 2B Model",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_prompt_chaining",
+      "label": "Prompt Chaining Architecture",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Five-step prompt chain (system, vibe, profile, chat, report) chosen to progressively narrow context \u2014 each step enriches the next with structured data while keeping individual prompts focused and within token budget for Gemma 2B."
+    },
+    {
+      "id": "plan_sse_streaming",
+      "label": "SSE Streaming",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_session_manager",
+      "label": "Session Manager",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_next_js",
+      "label": "Next.js 14",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_tailwind_css",
+      "label": "Tailwind CSS",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_shadcn_ui",
+      "label": "Shadcn/ui Components",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_framer_motion",
+      "label": "Framer Motion",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_vibe_check",
+      "label": "Vibe Check Step",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_academic_profile",
+      "label": "Academic Profile Step",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_chat_interface",
+      "label": "Chat Interface Step",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_report_reveal",
+      "label": "Report Reveal Step",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_career_fields",
+      "label": "Six Career Fields",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_career_report",
+      "label": "Career Report Structure",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_pydantic",
+      "label": "Pydantic v2",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "plan_api_endpoints",
+      "label": "API Endpoints",
+      "file_type": "document",
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "poppy_ui",
+      "label": "Poppy UI Application",
+      "file_type": "code",
+      "source_file": "poppy-ui.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "poppy_ui_tilt_card",
+      "label": "Tilt Card Effect",
+      "file_type": "code",
+      "source_file": "poppy-ui.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "poppy_ui_glassmorphism",
+      "label": "Glassmorphism",
+      "file_type": "code",
+      "source_file": "poppy-ui.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skill_algorithmic_art",
+      "label": "Algorithmic Art Skill",
+      "file_type": "document",
+      "source_file": ".opencode/skills/algorithmic-art/SKILL.md",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skill_algorithmic_philosophy",
+      "label": "Algorithmic Philosophy",
+      "file_type": "document",
+      "source_file": ".opencode/skills/algorithmic-art/SKILL.md",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skill_p5_js",
+      "label": "p5.js Library",
+      "file_type": "document",
+      "source_file": ".opencode/skills/algorithmic-art/SKILL.md",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skill_seeded_randomness",
+      "label": "Seeded Randomness",
+      "file_type": "document",
+      "source_file": ".opencode/skills/algorithmic-art/SKILL.md",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skill_anthropic_branding",
+      "label": "Anthropic Branding Guidelines",
+      "file_type": "document",
+      "source_file": ".opencode/skills/algorithmic-art/SKILL.md",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skill_generative_art",
+      "label": "Generative Art",
+      "file_type": "document",
+      "source_file": ".opencode/skills/algorithmic-art/SKILL.md",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "viewer_template",
+      "label": "Generative Art Viewer Template",
+      "file_type": "code",
+      "source_file": ".opencode/skills/algorithmic-art/templates/viewer.html",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "viewer_flow_field",
+      "label": "Flow Field Particle System",
+      "file_type": "code",
+      "source_file": ".opencode/skills/algorithmic-art/templates/viewer.html",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skill_find_skills",
+      "label": "Find Skills Skill",
+      "file_type": "document",
+      "source_file": ".opencode/skills/find-skills/SKILL.md",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skill_skills_cli",
+      "label": "Skills CLI Tool",
+      "file_type": "document",
+      "source_file": ".opencode/skills/find-skills/SKILL.md",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "skill_skills_sh",
+      "label": "skills.sh Registry",
+      "file_type": "document",
+      "source_file": ".opencode/skills/find-skills/SKILL.md",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "requirement_fastapi",
+      "label": "FastAPI Dependency",
+      "file_type": "code",
+      "source_file": "backend/requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "requirement_uvicorn",
+      "label": "Uvicorn Dependency",
+      "file_type": "code",
+      "source_file": "backend/requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "requirement_httpx",
+      "label": "httpx Dependency",
+      "file_type": "code",
+      "source_file": "backend/requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "requirement_pydantic",
+      "label": "Pydantic Dependency",
+      "file_type": "code",
+      "source_file": "backend/requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "prompt_system",
+      "label": "Poppy System Prompt",
+      "file_type": "document",
+      "source_file": "backend/prompts/system.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "prompt_vibe",
+      "label": "Vibe Selection Prompt",
+      "file_type": "document",
+      "source_file": "backend/prompts/vibe.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "prompt_profile_analysis",
+      "label": "Profile Analysis Prompt",
+      "file_type": "document",
+      "source_file": "backend/prompts/profile_analysis.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "prompt_chat",
+      "label": "Chat Interview Prompt",
+      "file_type": "document",
+      "source_file": "backend/prompts/chat.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "prompt_chat_json",
+      "label": "Chat JSON Prompt",
+      "file_type": "document",
+      "source_file": "backend/prompts/chat_json.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "prompt_options",
+      "label": "Options Generation Prompt",
+      "file_type": "document",
+      "source_file": "backend/prompts/options.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "prompt_report_generation",
+      "label": "Report Generation Prompt",
+      "file_type": "document",
+      "source_file": "backend/prompts/report_generation.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "readme_frontend",
+      "label": "Frontend README",
+      "file_type": "document",
+      "source_file": "frontend/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "plan_poppy",
+      "target": "plan_backend",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_poppy",
+      "target": "plan_frontend",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_poppy",
+      "target": "plan_prompt_chaining",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_poppy",
+      "target": "plan_sse_streaming",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_poppy",
+      "target": "plan_session_manager",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_poppy",
+      "target": "plan_api_endpoints",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_backend",
+      "target": "plan_fastapi",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_backend",
+      "target": "plan_ollama",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_backend",
+      "target": "plan_gemma_2b",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_backend",
+      "target": "plan_pydantic",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_frontend",
+      "target": "plan_next_js",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_frontend",
+      "target": "plan_tailwind_css",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_frontend",
+      "target": "plan_shadcn_ui",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_frontend",
+      "target": "plan_framer_motion",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_prompt_chaining",
+      "target": "prompt_system",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_prompt_chaining",
+      "target": "prompt_vibe",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_prompt_chaining",
+      "target": "prompt_profile_analysis",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_prompt_chaining",
+      "target": "prompt_chat",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_prompt_chaining",
+      "target": "prompt_report_generation",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_vibe_check",
+      "target": "plan_career_fields",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_report_reveal",
+      "target": "plan_career_report",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_vibe_check",
+      "target": "plan_chat_interface",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_academic_profile",
+      "target": "plan_chat_interface",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "plan_chat_interface",
+      "target": "plan_report_reveal",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skill_algorithmic_art",
+      "target": "skill_algorithmic_philosophy",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/skills/algorithmic-art/SKILL.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skill_algorithmic_art",
+      "target": "skill_p5_js",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/skills/algorithmic-art/SKILL.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skill_algorithmic_art",
+      "target": "skill_seeded_randomness",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/skills/algorithmic-art/SKILL.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skill_algorithmic_art",
+      "target": "skill_anthropic_branding",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/skills/algorithmic-art/SKILL.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skill_algorithmic_art",
+      "target": "skill_generative_art",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/skills/algorithmic-art/SKILL.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skill_algorithmic_art",
+      "target": "viewer_template",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/skills/algorithmic-art/SKILL.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skill_find_skills",
+      "target": "skill_skills_cli",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/skills/find-skills/SKILL.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "skill_find_skills",
+      "target": "skill_skills_sh",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/skills/find-skills/SKILL.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "viewer_template",
+      "target": "viewer_flow_field",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".opencode/skills/algorithmic-art/templates/viewer.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "poppy_ui",
+      "target": "plan_vibe_check",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "poppy-ui.html",
+      "source_location": null,
+      "weight": 0.85
+    },
+    {
+      "source": "poppy_ui",
+      "target": "plan_academic_profile",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "poppy-ui.html",
+      "source_location": null,
+      "weight": 0.85
+    },
+    {
+      "source": "poppy_ui",
+      "target": "plan_poppy",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "poppy-ui.html",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "poppy_ui",
+      "target": "poppy_ui_tilt_card",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "poppy-ui.html",
+      "source_location": null,
+      "weight": 0.95
+    },
+    {
+      "source": "poppy_ui",
+      "target": "poppy_ui_glassmorphism",
+      "relation": "implements",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "poppy-ui.html",
+      "source_location": null,
+      "weight": 0.95
+    },
+    {
+      "source": "plan_backend",
+      "target": "requirement_fastapi",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "plan_backend",
+      "target": "requirement_httpx",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 0.9
+    },
+    {
+      "source": "prompt_chat",
+      "target": "prompt_chat_json",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "backend/prompts/chat.md",
+      "source_location": null,
+      "weight": 0.85
+    },
+    {
+      "source": "prompt_chat",
+      "target": "prompt_options",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "backend/prompts/chat.md",
+      "source_location": null,
+      "weight": 0.7
+    },
+    {
+      "source": "plan_frontend",
+      "target": "plan_academic_profile",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "PLAN.md",
+      "source_location": null,
+      "weight": 0.9
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "four_step_flow",
+      "label": "Four-Step Interview Flow",
+      "nodes": [
+        "plan_vibe_check",
+        "plan_academic_profile",
+        "plan_chat_interface",
+        "plan_report_reveal"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md"
+    },
+    {
+      "id": "prompt_chain",
+      "label": "Prompt Chaining Pipeline",
+      "nodes": [
+        "prompt_system",
+        "prompt_vibe",
+        "prompt_profile_analysis",
+        "prompt_chat",
+        "prompt_report_generation"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PLAN.md"
+    },
+    {
+      "id": "backend_stack",
+      "label": "Backend Technology Stack",
+      "nodes": [
+        "plan_fastapi",
+        "plan_ollama",
+        "plan_gemma_2b",
+        "plan_pydantic",
+        "plan_sse_streaming",
+        "plan_session_manager",
+        "plan_api_endpoints"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "PLAN.md"
+    },
+    {
+      "id": "frontend_stack",
+      "label": "Frontend Technology Stack",
+      "nodes": [
+        "plan_next_js",
+        "plan_tailwind_css",
+        "plan_shadcn_ui",
+        "plan_framer_motion"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "PLAN.md"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
